@@ -6,13 +6,18 @@ import drivers.DriverB;
 import drivers.DriverC;
 import exception.NoDriveLicenseException;
 
+import java.util.HashSet;
+import java.util.Iterator;
+
 
 public class Main {
+
+
+
     public static void main(String[] args){
 
         ListCars cars = new ListCars();
-
-
+        HashSet <Driver> drivers = new HashSet<>();
 
         DriverA john = new DriverA("John", false, 5);
         DriverB smith = new DriverB("Smith", true, 10);
@@ -38,18 +43,18 @@ public class Main {
         audi.setBodyType(Car.BodyType.WAGON);
         lexus.setBodyType(Car.BodyType.SEDAN);
 
-        cars.addCar(lada);
-        cars.addCar(bmw);
-        cars.addCar(audi);
-        cars.addCar(lexus);
-        cars.addCar(gaz);
-        cars.addCar(mercedes);
-        cars.addCar(volkswagen);
-        cars.addCar(ford);
-        cars.addCar(gazel);
-        cars.addCar(volvo);
-        cars.addCar(fiat);
-        cars.addCar(hyundai);
+//        cars.addCar(lada);
+//        cars.addCar(bmw);
+//        cars.addCar(audi);
+//        cars.addCar(lexus);
+//        cars.addCar(gaz);
+//        cars.addCar(mercedes);
+//        cars.addCar(volkswagen);
+//        cars.addCar(ford);
+//        cars.addCar(gazel);
+//        cars.addCar(volvo);
+//        cars.addCar(fiat);
+//        cars.addCar(hyundai);
 
         //System.out.println("Количество машин в списке - " + cars.getAllTransport().size());
 
@@ -65,25 +70,33 @@ public class Main {
         Mechanic<Track> stathamJason = new Mechanic<>("Statham Jason", "Audi");
 
 
-        lada.setMechanics(willSmith,5);
-        lada.setMechanics(willSmith,3);
-        lada.setMechanics(willSmith,6);
-        lada.setMechanics(jackLite,3);
-        bmw.setMechanics(ivanIvanov,8);
-    //    lada.getAllTeam(lada);
-    //    System.out.println(lada.getMechanics());
+        ///lada.setMechanics(willSmith,5);
+        ///lada.setMechanics(willSmith,3);
+        ///lada.setMechanics(willSmith,6);
+        ///lada.setMechanics(jackLite,3);
+        ///bmw.setMechanics(ivanIvanov,8);
+    ///   lada.getAllTeam(lada);
+    ///   System.out.println(lada.getMechanics());
 
-        //    volvo.getAllTeam(volvo);
+        ///    volvo.getAllTeam(volvo);
+
+        drivers.add(john);
+        drivers.add(john);
+        drivers.add(smith);
+        drivers.add(smith);
+        drivers.add(alex);
+        drivers.add(alex);
+        for (Driver driver : drivers) {
+            System.out.println(driver);
+
+        }
 
 
-        Driver.setListDrivers("Will");
-        Driver.setListDrivers("John");
-        Driver.setListDrivers("John");
-        Driver.setListDrivers("John");
-        Driver.setListDrivers("Steve");
-        Driver.setListDrivers("Steve");
-    //    System.out.println(Driver.getListDrivers());
-        printDrivers();
+
+    ///    System.out.println(Driver.getListDrivers());
+        ///printDrivers();
+        ///check(smith);
+
     }
 
 
@@ -106,8 +119,6 @@ public class Main {
         System.out.println("Автомобиль " + transport.getBrand() + " " + transport.getModel() + ": водитель - " + transport.getDriver() + ", Механик: ");
     }
     public static void printDrivers() {
-        for (String next : Driver.getListDrivers()) {
-            System.out.println(next);
+
         }
     }
-}

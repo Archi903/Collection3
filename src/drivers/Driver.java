@@ -8,7 +8,7 @@ public abstract class Driver {
     private final String name;
     private final boolean driverLicense;
     private final int experience;
-    private static final Set<String> listDrivers = new HashSet<>();
+
 
     public Driver(String name, boolean driverLicense, int experience){
         this.name = name;
@@ -37,13 +37,6 @@ public abstract class Driver {
     public abstract void refillCar();
 
 
-    public static Set<String> getListDrivers() {
-        return listDrivers;
-    }
-
-    public static void setListDrivers(String name) {
-        listDrivers.add(name);
-    }
 
     @Override
     public String toString() {
